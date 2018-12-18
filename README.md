@@ -7,7 +7,7 @@ OctoPrint Plugin that executes shell commands on temperature violations
 1. Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
 or manually using this URL:
 
-    	https://github.com/google/OctoPrint-TemperatureFailsafe/archive/master.zip
+    	https://github.com/Webstas/OctoPrint-TemperatureFailsafe/archive/master.zip
 
 1. Restart OctoPrint
 

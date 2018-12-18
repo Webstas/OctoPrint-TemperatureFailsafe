@@ -189,12 +189,12 @@ class TemperatureFailsafe(octoprint.plugin.AssetPlugin,
 
 				# version check: github repository
 				type="github_release",
-				user="google",
+				user="Webstas",
 				repo="OctoPrint-TemperatureFailsafe",
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/google/OctoPrint-TemperatureFailsafe/archive/{target_version}.zip"
+				pip="https://github.com/Webstas/OctoPrint-TemperatureFailsafe/archive/{target_version}.zip"
 			)
 		)
 
