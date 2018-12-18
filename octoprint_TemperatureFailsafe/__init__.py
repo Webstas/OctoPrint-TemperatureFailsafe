@@ -18,6 +18,7 @@
 from __future__ import absolute_import
 
 import octoprint.plugin
+import os
 from octoprint.util import RepeatedTimer
 from easyprocess import EasyProcess
 
@@ -60,7 +61,7 @@ class TemperatureFailsafe(octoprint.plugin.AssetPlugin,
 
 		# execute the shell command
 		cmd = self._settings.get(['command'])
-
+				
 		timeout = self._settings.get_int(['read_timeout'])
 		# 0 implies no timeout
 		if timeout == 0:
@@ -68,6 +69,7 @@ class TemperatureFailsafe(octoprint.plugin.AssetPlugin,
 
 		if cmd:
 			self._logger.info(u"Executing Shell Command: %r" % (cmd,))
+			returned_value = os.system(cmd)
 			p = EasyProcess(cmd, env=env).call(timeout=timeout)
 			# TODO: perform a octoprint popup with the shell command response
 			self._logger.info(u"Exit Code from Shell Command: %r" % (p.return_code,))
